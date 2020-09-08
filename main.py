@@ -16,7 +16,7 @@ class cube(object):
     def move(self, dirnx, dirny):
         pass
 
-    def draw(self, surface, eyes=False)
+    def draw(self, surface, eyes=False):
         pass
 
 class snake(object):
@@ -51,8 +51,8 @@ def drawGrid(w, rows, surface):
 
 def redrawWindow(surface):
     global rows, width
-    win.fill((0,0,0))
-    drawGrid(width, row, surface)
+    surface.fill((0,0,0))
+    drawGrid(width, rows, surface)
     pygame.display.update()
     pass
 
@@ -63,7 +63,7 @@ def message_box(subject, content):
     pass
 
 def main():
-    global width, rows
+    global width, rows, s
     width = 500
     rows = 20
     win = pygame.display.set_mode((width, width))
@@ -81,5 +81,5 @@ def main():
     pass
 
 
-main()
+# main()
 
