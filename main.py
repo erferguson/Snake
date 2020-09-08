@@ -11,10 +11,15 @@ class cube(object):
     w = 0
 
     def __init__(self, start, dirnx=1, dirny=0, color=(255,0,0)):
-        pass
+        self.pos = start
+        self.dirnx = 1
+        self.dirny = 0
+        self.color = color
 
     def move(self, dirnx, dirny):
-        pass
+        self.dirnx = dirnx
+        self.dirny = dirny
+        self.pos(self.pos[0] + self.dirnx, self.pos[1] + self.dirny)
 
     def draw(self, surface, eyes=False):
         pass
@@ -101,7 +106,8 @@ def drawGrid(w, rows, surface):
     pass
 
 def redrawWindow(surface):
-    global rows, width
+    global rows, width, s
+    s.draw(surface)
     surface.fill((0,0,0))
     drawGrid(width, rows, surface)
     pygame.display.update()
