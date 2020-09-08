@@ -80,7 +80,11 @@ class snake(object):
         pass
 
     def draw(self, surface):
-        pass
+        for i, c in enumerate(self.body):
+            if i == 0:
+                c.draw(surface, True)
+            else:
+                c.draw(surface)
 
 def drawGrid(w, rows, surface):
     sizeBtwn = w // rows
