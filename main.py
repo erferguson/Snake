@@ -160,7 +160,14 @@ def randomSnack(rows, item):
     return (x,y)
 
 def message_box(subject, content):
-    pass
+    root = tk.Tk()
+    root.attributes('-topmost', True)
+    root.windraw()
+    messagebox.showinfo(subject, content)
+    try:
+        root.destroy()
+    except:
+        pass
 
 def main():
     global width, rows, s, snack
