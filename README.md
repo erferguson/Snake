@@ -1,5 +1,5 @@
 # Snake
-Snake game
+Classic Snake game
 
 # Pygame
 -  Installed > https://www.pygame.org/wiki/GettingStarted#Pygame%20Installation
